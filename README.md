@@ -1,5 +1,8 @@
-# Project Name
-> Outline a brief description of your project.
+# Melanoma Detection Assignment
+
+This assignment is to build Convolutional Neural Network to classify the given images in  detecting melanoma.
+
+There 9 classes in the dataset and the model should classify the unseen image into one of these 9 classes.
 
 
 ## Table of Contents
@@ -8,45 +11,52 @@
 * [Conclusions](#conclusions)
 * [Acknowledgements](#acknowledgements)
 
-<!-- You can include any other section that is pertinent to your problem -->
 
 ## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+- The dataset has images classified into following classes,
+
+    - actinic keratosis 
+    - basal cell carcinoma
+    - dermatofibroma
+    - melanoma
+    - nevus
+    - pigmented benign keratosis
+    - seborrheic keratosis
+    - squamous cell carcinoma
+    - vascular lesion
+
+- The goal of the project is to train CNN Model using the train dataset to classify the given image into one of these classes.
+
+- Due to insufficient train dataset we are supposed to use data augmentation techniques.
+
+- We should build multiple models with different parameters and analyze them with respect to over / underfitting and how they perform on test dataset.
+
 
 ## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
-
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+- The models built using only given train dataset generally underfit and perform badly on test data.
+- Dropout helped to improve performance (and prevent overfitting) however the BatchNormalization did not. The model using BatchNormalization kept underfitting.
+- Augmentor really helped to improve the training of CNN model.
+- Having more no. of filter layers and two Dense layers in FC helps to improve the accuracy marginally.
 
 
 ## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
+- tensorflow 2.15
+- matplotlib 3.8.2
+- numpy 1.26.2
+- pandas 2.1.4
+- scikit-learn 1.3.2
 
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
 
 ## Acknowledgements
 Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
+
+- Referred https://stats.stackexchange.com/ and https://datascience.stackexchange.com/ for various doubts resolution.
+
+- The upgrad live class helped me to get started.
+
+- Documentation on tensorflow.org
 
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Created by [@porechajp] - feel free to contact me!
